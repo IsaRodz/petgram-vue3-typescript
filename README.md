@@ -1,6 +1,6 @@
 # Petgram on Vue 3 with Typescript
 
-A few months ago I build this simple app using the React JS library, then made a clone with React Native and then again using React with Typescript.
+A few months ago I built this simple app using the React JS library, then made a clone with React Native and then again using React with Typescript.
 Now, since Vue 3 it's been out there for quite awhile I decided to replicate this dummy app using this amazing framework and why not take advantange of the TS features too.
 
 This project was carried out with the purpose of learning and experimenting with these technologies
