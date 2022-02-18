@@ -1,15 +1,27 @@
-import axios from 'axios';
-import { onMounted, ref } from 'vue';
+import { onMounted, Ref, ref, watch } from 'vue';
+import api from '@/providers/api';
+import { Post } from '@/interfaces';
 
-export default function useFetchPosts() {
-  const posts = ref([]);
+//
+export function useFetchPosts() {
+  const posts = ref<Post[]>([]);
+  const loading = ref(false);
+  const page = ref(0);
 
-  onMounted(async () => {
-    const { data } = await axios.get('https://jsonplaceholder.typicode.com/posts');
-    posts.value = data;
-  });
+  const getPosts = async () => {
+    loading.value = true;
+    const { data } = await api.getPosts(page.value);
+    posts.value.push(...data); // = data;
+    loading.value = false;
+  };
+
+  onMounted(getPosts);
+
+  watch(page, getPosts);
 
   return {
-    posts
+    posts,
+    loading,
+    page
   };
 }

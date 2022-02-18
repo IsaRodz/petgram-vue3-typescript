@@ -1,6 +1,13 @@
 <template>
-  <div class="flex justify-center gap-1">
-    <div class="w-10 h-10 bg-blue-500 rounded-full animate-ping"></div>
+  <div class="flex flex-col items-center gap-2">
+    <i class="pi pi-spinner animate-spin text-blue-500 text-3xl"></i>
+    <p class="text-blue-500 text-sm">Loading...</p>
   </div>
-  <p class="text-center text-blue-500">Loading...</p>
 </template>
+
+<style lang="postcss" scoped>
+.spinner {
+  @apply w-10 h-10 border-4 border-solid border-blue-500 rounded-full animate-spin;
+  border-top-color: transparent;
+}
+</style>

@@ -15,20 +15,4 @@
     @apply bg-gray-100 py-2 px-3 rounded-md text-blue-400 hover:text-blue-500;
     width: fit-content;
   }
-
-  .modal-overlay {
-    @apply fixed bg-gray-900 top-0 left-0 right-0 bottom-0 bg-opacity-80;
-  }
-
-  .modal-container {
-    @apply fixed flex items-center justify-center top-0 left-0 right-0 bottom-0;
-  }
-
-  .modal-body {
-    width: 100%;
-    transform: translate(-50%);
-
-    @apply fixed m-auto top-20 left-1/2 max-w-lg
-      rounded-md bg-white shadow-sm p-5 z-10;
-  }
 }

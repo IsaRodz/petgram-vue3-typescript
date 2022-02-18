@@ -1,5 +1,5 @@
 <template>
-  <div class="flex bg-gray-50 rounded-md px-3 py-2">
+  <div class="flex bg-gray-100 rounded-xl px-3 py-2">
     <input
       class="bg-transparent outline-none flex-grow"
       placeholder="Add a new comment"
